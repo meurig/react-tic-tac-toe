@@ -139,8 +139,10 @@ function calculateWinner(squares) {
 
   let draw = true;
   for (let i = 0; i < squares.length; i++) {
-    if (!squares[i])
+    if (!squares[i]) {
       draw = false;
+      break;
+    }
   }
   if (draw) {
     return 'Draw';
